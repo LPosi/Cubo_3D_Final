@@ -19,6 +19,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   </head>
 
   <body>
@@ -72,19 +73,23 @@
     <main>
       <section>
         <h1 class="section-title">Soluciones Creativas</h1>
-        <p class="section-text">
+        <p data-aos="fade-down" class="section-text">
           Transformamos tus ideas en objetos tangibles con tecnología de
           vanguardia.<br />
           Perfecto para prototipos, piezas personalizadas o proyectos creativos.
         </p>
         <div class="image-content">
-          <img src="../images/filtro.jpg" alt="Filtro 3D" />
+          <img
+            data-aos="flip-left"
+            src="../images/filtro.jpg"
+            alt="Filtro 3D"
+          />
         </div>
       </section>
 
       <section>
         <h1 class="section-title">¿Por qué elegirnos?</h1>
-        <ul class="section-list">
+        <ul data-aos="fade-down" class="section-list">
           <li><strong>Materiales duraderos:</strong> PLA, ABS, PETG y más.</li>
           <li>
             <strong>Precisión milimétrica:</strong> Resolución hasta 0.16 mm.
@@ -92,7 +97,11 @@
           <li><strong>Entrega rápida:</strong> Envíos en 48-72 hs.</li>
         </ul>
         <div class="image-content">
-          <img src="../images/soporte_pc.png" alt="Soporte para PC 3D" />
+          <img
+            data-aos="flip-left"
+            src="../images/soporte_pc.png"
+            alt="Soporte para PC 3D"
+          />
         </div>
       </section>
     </main>
@@ -106,5 +115,11 @@
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init(1000);
+    </script>
   </body>
 </html>
