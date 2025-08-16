@@ -1,0 +1,6 @@
+@use "../utilities/variables";
+
+header {
+  background-color: variables.$dark-background;
+  padding: 1rem 2rem;
+}

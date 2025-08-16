@@ -1,0 +1,64 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+section {
+  @include mixins.section-styles;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: variables.$text-color;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: variables.$text-color;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    color: variables.$text-color;
+
+    li {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      position: relative;
+
+      &::before {
+        content: "•";
+        color: variables.$primary-color;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+
+  div {
+    text-align: center;
+    margin-top: 1.5rem;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  @include mixins.responsive(tablet) {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+  }
+
+  @include mixins.responsive(phone) {
+    padding: 1.2rem;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}

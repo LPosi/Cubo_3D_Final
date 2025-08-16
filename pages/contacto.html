@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Listo, materializar, proyecto, archivos, nombre, email, proyecto, teléfono, contactarnos, CUBO 3D"
+    />
+    <meta
+      name="description"
+      content="Formulario de contacto para que rellene con susu datos el cliente y debajo nuestro contacto de email y teléfono"
+    />
     <title>CUBO 3D - Contacto</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
@@ -59,8 +67,8 @@
 
     <main>
       <section>
-        <h2 class="section-title">¿Listo para materializar tu proyecto?</h2>
-        <p class="section-text">
+        <h1>¿Listo para materializar tu proyecto?</h1>
+        <p>
           Envianos tus archivos 3D o describinos lo que necesitas. ¡Cotización
           sin costo!
         </p>
@@ -70,15 +78,24 @@
         <div class="contact-form">
           <h3 class="contact-form__title">Formulario de contacto</h3>
           <form action="https://getform.io/f/broglvla" method="POST">
-            <label for="nombre" class="form-group__label">Nombre:</label>
-            <input type="text" name="nombre" />
-            <label for="email" class="form-group__label">Email:</label>
-            <input type="email" name="email" />
-            <label for="mensaje" class="form-group__label"
-              >Describe tu proyecto:</label
-            >
-            <input type="text" name="message" />
-            <button type="submit">Enviar</button>
+            <div class="form-group">
+              <label for="nombre" class="form-group__label">Nombre:</label>
+              <input type="text" name="nombre" class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-group__label">Email:</label>
+              <input type="email" name="email" class="form-control" />
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje" class="form-group__label"
+                >Describe tu proyecto:</label
+              >
+              <textarea name="message" class="form-control"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Enviar</button>
           </form>
         </div>
       </section>

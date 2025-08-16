@@ -1,0 +1,13 @@
+@use "../utilities/variables";
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-image: url(../images/fondo_hexagonal.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: variables.$text-color;
+  margin: 0;
+}

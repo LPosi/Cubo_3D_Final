@@ -1,0 +1,150 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+.navbar {
+  padding: 0.5rem 1rem;
+  @include mixins.dark-background;
+}
+
+.navbar > .container-fluid {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: auto;
+  justify-content: flex-end;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+  justify-content: flex-end;
+  display: none;
+}
+
+.navbar-collapse.show {
+  display: flex;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  flex-direction: row;
+}
+
+.nav-link {
+  color: variables.$text-color;
+  padding: 0.5rem 1rem;
+  @include mixins.transition();
+
+  &:hover,
+  &:focus {
+    color: variables.$primary-color;
+  }
+
+  &.active {
+    color: variables.$primary-color;
+    font-weight: 600;
+  }
+}
+
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.25rem 0.5rem;
+  margin-left: auto;
+  order: 2;
+  background: transparent;
+  cursor: pointer;
+
+  @media (min-width: 670px) {
+    display: none;
+  }
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(79, 195, 247, 0.5);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.logo {
+  width: 110px;
+  height: auto;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.navbar.bg-dark {
+  border-bottom: none !important;
+}
+
+@media (max-width: 669px) {
+  .navbar > .container-fluid {
+    flex-wrap: wrap;
+  }
+
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 0.25rem;
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .logo-wrapper {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .navbar-collapse:not(.show) {
+    display: none;
+  }
+
+  .navbar-collapse.collapsing {
+    height: auto;
+    transition: height 0.35s ease;
+    overflow: hidden;
+  }
+
+  .navbar-collapse.show {
+    display: flex;
+    height: auto;
+  }
+}
+
+@media (min-width: 670px) {
+  .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+}

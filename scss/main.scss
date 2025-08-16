@@ -1,0 +1,16 @@
+//BASE
+@use "./parcials/base/reset";
+@use "./parcials/base/tipografia";
+
+//COMPONENTS
+@use "./parcials/Components/general";
+@use "./parcials/Components/form";
+@use "./parcials/Components/navbar";
+@use "./parcials/Components/footer";
+@use "./parcials/Components/section";
+@use "./parcials/Components/header";
+
+//UTILITIES
+@use "./parcials/utilities/mixins";
+@use "./parcials/utilities/variables";
+@use "./parcials/utilities/extend";
