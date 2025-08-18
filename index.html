@@ -22,31 +22,20 @@
 
   <body>
     <header>
-      <nav class="navbar">
+      <nav>
         <div class="container-fluid">
           <div class="logo-wrapper">
-            <a class="navbar-brand" href="index.html">
+            <a href="index.html">
               <img src="./images/logo.png" alt="Logo CUBO 3D" class="logo" />
             </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
+            <button class="navbar-toggler" aria-label="Abrir menú">
               <span class="navbar-toggler-icon"></span>
             </button>
           </div>
           <div class="navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a
-                  class="nav-link actived"
-                  aria-current="page"
-                  href="index.html"
+                <a class="nav-link active" aria-current="page" href="index.html"
                   >Inicio</a
                 >
               </li>
@@ -69,54 +58,45 @@
     </header>
 
     <main>
-      <section>
+      <section data-aos="fade-up">
         <h1 class="section-title">Servicios Integrales</h1>
-        <p data-aos="fade-down" class="section-text">
+        <p class="section-text">
           No solo imprimimos: te acompañamos desde el diseño hasta el acabado
           profesional.
         </p>
         <div class="image-content">
-          <img
-            data-aos="fade-right"
-            src="./images/lampara_3D_1.jpg"
-            alt="Lámpara impresa en 3D"
-          />
+          <img src="./images/lampara_3D_1.jpg" alt="Lámpara impresa en 3D" />
         </div>
       </section>
 
-      <section>
+      <section data-aos="fade-up">
         <h1 class="section-title">Nuestros Servicios</h1>
         <ul class="section-list">
-          <li data-aos="fade-down">
+          <li>
             <strong>Diseño 3D:</strong> Modelado desde cero, optimización de
             archivos.
           </li>
-          <li data-aos="fade-down">
+          <li>
             <strong>Escaneo 3D:</strong> Digitalización de objetos reales.
           </li>
         </ul>
         <div class="image-content">
           <img
-            data-aos="flip-left"
             src="./images/pistola_1.png"
             alt="Pistola llavero impresa en 3D"
           />
         </div>
       </section>
 
-      <section>
+      <section data-aos="fade-up">
         <h1 class="section-title">Línea Técnica</h1>
-        <ul data-aos="fade-down" class="section-list">
+        <ul class="section-list">
           <li>Soportes y repuestos para electrodomésticos.</li>
           <li>Prototipos de productos (envases, mecanismos).</li>
           <li>Piezas para robots y drones.</li>
         </ul>
         <div class="image-content">
-          <img
-            data-aos="flip-left"
-            src="./images/acces_pelu.png"
-            alt="Accesorio impreso en 3D"
-          />
+          <img src="./images/acces_pelu.png" alt="Accesorio impreso en 3D" />
         </div>
       </section>
     </main>
@@ -128,12 +108,9 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-      AOS.init({
-        duration: 1000,
-        once: true,
-      });
+      AOS.init(1000);
     </script>
   </body>
 </html>
